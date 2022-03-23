@@ -76,5 +76,5 @@ public class InitDataWareHouse {
         statusList.add(new Status(3,"Success Delivered"));
         statusList.add(new Status(4,"Received"));
         return statusList;
-    }
+    } 
 }

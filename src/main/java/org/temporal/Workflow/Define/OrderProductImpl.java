@@ -46,6 +46,7 @@ public class OrderProductImpl implements OrderProduct {
                 LOG.info("***** Waiting for Hoang Phuc International to confirm your order");
                 activityOrderNewProduct.assignEmpConfirm();
 
+                LOG.info("isOrderConfirmed: "+isOrderConfirmed);
                 Workflow.await(() -> isOrderConfirmed);
                 LOG.info("isOrderConfirmed: "+isOrderConfirmed);
                 invoice.setStatus("confirmed");
@@ -83,7 +84,7 @@ public class OrderProductImpl implements OrderProduct {
     @Override
     public void signalOrderAccepted() {
         activityOrderNewProduct.setOrderAccepted();
-        this.isOrderConfirmed = false;
+        this.isOrderConfirmed = true;
     }
 
     @Override

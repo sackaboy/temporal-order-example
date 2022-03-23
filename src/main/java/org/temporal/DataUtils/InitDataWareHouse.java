@@ -66,7 +66,6 @@ public class InitDataWareHouse {
         productList.add(new Product(2,"Dr Martens 1461",2700000.00,12,"",true,new Provider(1,"Dr Martens")));
         return productList;
     }
-
     @Produces
     @ApplicationScoped
     public List<Status> getLstStatus(){
@@ -76,5 +75,5 @@ public class InitDataWareHouse {
         statusList.add(new Status(3,"Success Delivered"));
         statusList.add(new Status(4,"Received"));
         return statusList;
-    } 
+    }
 }
